@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Browse and calculate fees for Empowering the Nation's skills training courses in Johannesburg." />
+    <meta name="keywords" content="courses, skills training, domestic workers, gardeners, Johannesburg, Precious Radebe" />
+    <meta name="author" content="Precious Radebe" />
+    <title>Courses - Empowering the Nation</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            background: #f9f9f7;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        /* Theme Colors */
+        :root {
+            --primary: #2e8b57;
+            --accent: #ffcc00;
+            --text: #333;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--primary);
+            padding: 0.8rem 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .logo {
+            width: 180px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        nav {
+            background: #000;
+            padding: 0.5rem 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.6rem 1.2rem;
+            margin: 0 0.8rem;
+            border-radius: 30px;
+            transition: background 0.3s;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            background: var(--primary);
+        }
+
+        /* Section Styling */
+        .section-content {
+            max-width: 900px;
+            margin: 3rem auto;
+            background: #fff;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            line-height: 1.8;
+        }
+
+        h1, h2 {
+            color: var(--primary);
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+        }
+
+        .highlight {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* Course Lists */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 0.8rem 0;
+        }
+
+        .course-link {
+            color: var(--primary);
+            text-decoration: underline;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .course-link:hover {
+            color: var(--accent);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #226b45;
+        }
+
+        /* Form Styling */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"] {
+            width: 100%;
+            padding: 0.6rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .checkbox-group label {
+            display: block;
+            margin: 0.5rem 0;
+            font-weight: normal;
+        }
+
+        .calculate-btn {
+            background: var(--primary);
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+
+        .calculate-btn:hover {
+            background: #226b45;
+        }
+
+        .total-box {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: #f0f7f4;
+            border: 2px dashed var(--primary);
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .total-box h3 {
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: var(--primary);
+            color: white;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        .social-icons {
+            margin: 1rem 0;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.3rem;
+            margin: 0 0.8rem;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .section-content {
+                padding: 1.5rem;
+                margin: 2rem 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 0.3rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Empowering the Nation Logo" class="logo" />
+        </div>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="course.html" class="active">Courses</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Home Page (Course Summaries) -->
+        <section id="home" class="section active">
+            <div class="section-content">
+                <h2>Summary of Six-Month Courses</h2>
+                <p>Each course runs over 12 weeks and costs R1500.</p>
+                <ul>
+                    <li><span class="course-link" onclick="showCourseDetail('first-aid')">First Aid</span></li>
+                    <li><span class="course-link" onclick="showCourseDetail('sewing')">Sewing</span></li>
+                    <li><span class="course-link" onclick="showCourseDetail('landscaping')">Landscaping</span></li>
+                    <li><span class="course-link" onclick="showCourseDetail('life-skills')">Life Skills</span></li>
+                </ul>
+
+                <h2>Summary of Six-Week Short Courses</h2>
+                <p>Each course runs over 6 weeks.</p>
+                <ul>
+                    <li><span class="course-link" onclick="showCourseDetail('child-minding')">Child Minding</span></li>
+                    <li><span class="course-link" onclick="showCourseDetail('cooking')">Cooking</span></li>
+                    <li><span class="course-link" onclick="showCourseDetail('garden-maintenance')">Garden Maintenance</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Six-Month Courses Detail -->
+        <section id="first-aid" class="section" style="display:none;">
+            <div class="section-content">
+                <h2>First Aid</h2>
+                <p><strong>Fees:</strong> R1500</p>
+                <p><strong>Purpose:</strong> To provide first aid awareness and basic life support</p>
+                <p><strong>Content:</strong></p>
+                <ul>
+                    <li>Wounds and bleeding</li>
+                    <li>Burns and fractures</li>
+                    <li>Emergency scene management</li>
+                    <li>Cardio-Pulmonary Resuscitation (CPR)</li>
+                    <li>Respiratory distress e.g., Choking, blocked airway</li>
+                </ul>
+                <a href="#" class="btn" onclick="showSection('home')">Back to Courses</a>
+            </div>
+        </section>
+
+        <section id="sewing" class="section" style="display:none;">
+            <div class="section-content">
+                <h2>Sewing</h2>
+                <p><strong>Fees:</strong> R1500</p>
+                <p><strong>Purpose:</strong> To provide alterations and new garment tailoring services</p>
+                <p><strong>Content:</strong></p>
+                <ul>
+                    <li>Types of stitches</li>
+                    <li>Threading a sewing machine</li>
+                    <li>Sewing buttons, zips, hems and seams</li>
+                    <li>Alterations</li>
+                    <li>Designing and sewing new garments</li>
+                </ul>
+                <a href="#" class="btn" onclick="showSection('home')">Back to Courses</a>
+            </div>
+        </section>
+
+        <section id="landscaping" class="section" style="display:none;">
+            <div class="section-content">
+                <h2>Landscaping</h2>
+                <p><strong>Fees:</strong> R1500</p>
+                <p><strong>Purpose:</strong> To provide landscaping services for new and established gardens</p>
+                <p><strong>Content:</strong></p>
+                <ul>
+                    <li>Indigenous and exotic plants and trees</li>
+                    <li>Fixed structures (fountains, statues, benches, tables, built-in braai)</li>
+                    <li>Balancing of plants and trees in a garden</li>
+                    <li>Aesthetics of plant shapes and colours</li>
+                    <li>Garden layout</li>
+                </ul>
+                <a href="#" class="btn" onclick="showSection('home')">Back to Courses</a>
+            </div>
+        </section>
+
+        <section id="life-skills" class="section" style="display:none;">
+            <div class="section-content">
+                <h2>Life Skills</h2>
+                <p><strong>Fees:</strong> R1500</p>
+                <p><strong>Purpose:</strong> To provide skills to navigate basic life necessities</p>
+                <p><strong>Content:</strong></p>
+                <ul>
+                    <li>Personal finance management</li>
+                    <li>Communication and conflict resolution</li>
+                    <li>Time management</li>
+                    <li>Health and hygiene practices</li>
+                    <li>Problem-solving and decision-making</li>
+                </ul>
+                <a href="#" class="btn" onclick="showSection('home')">Back to Courses</a>
+            </div>
+        </section>
+
+        <!-- Six-Week Courses Detail -->
+        <section id="child-minding" class="section" style="display:none;">
+            <div class="section-content">
+                <h2>Child Minding</h2>
+                <p><strong>Fees:</strong> R600</p>
+                <p><strong>Purpose:</strong> To train individuals in safe and nurturing care for children aged 0–12 years</p>
+                <p><strong>Content:</strong></p>
+                <ul>
+                    <li>Child development stages</li>
+                    <li>Safe play and supervision techniques</li>
+                    <li>Nutrition and feeding routines</li>
+                    <li>Basic first aid for children</li>
+                    <li>Behavior management strategies</li>
+                </ul>
+                <a href="#" class="btn" onclick="showSection('home')">Back to Courses</a>
+            </div>
+        </section>
+
+        <section id="cooking" class="section" style="display:none;">
+            <div class="section-content">
+                <h2>Cooking</h2>
+                <p><strong>Fees:</strong> R600</p>
+                <p><strong>Purpose:</strong> To teach essential cooking skills for home and commercial use</p>
+                <p><strong>Content:</strong></p>
+                <ul>
+                    <li>Basic knife skills and food safety</li>
+                    <li>Meal planning and budgeting</li>
+                    <li>Preparation of traditional South African dishes</li>
+                    <li>Stir-frying, roasting, grilling, and stewing</li>
+                    <li>Dietary considerations (vegetarian, gluten-free)</li>
+                </ul>
+                <a href="#" class="btn" onclick="showSection('home')">Back to Courses</a>
+            </div>
+        </section>
+
+        <section id="garden-maintenance" class="section" style="display:none;">
+            <div class="section-content">
+                <h2>Garden Maintenance</h2>
+                <p><strong>Fees:</strong> R600</p>
+                <p><strong>Purpose:</strong> To equip learners with skills to maintain healthy and attractive gardens</p>
+                <p><strong>Content:</strong></p>
+                <ul>
+                    <li>Soil preparation and fertilization</li>
+                    <li>Watering systems and conservation</li>
+                    <li>Pruning and weeding</li>
+                    <li>Pest and disease control</li>
+                    <li>Seasonal planting and care</li>
+                </ul>
+                <a href="#" class="btn" onclick="showSection('home')">Back to Courses</a>
+            </div>
+        </section>
+
+        <!-- Calculate Fees Section -->
+        <section id="calculator" class="section" style="display:none;">
+            <div class="section-content">
+                <h2>Calculate Total Fees</h2>
+                <p>Select one or more courses below to calculate your total fee with applicable discounts and VAT (15%).</p>
+                <form id="feeForm">
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" required />
+                    </div>
+
+                    <div class="checkbox-group">
+                        <h3>Select Courses:</h3>
+                        <label>
+                            <input type="checkbox" name="course" value="first-aid" data-fee="1500" /> First Aid – R1500
+                        </label>
+                        <label>
+                            <input type="checkbox" name="course" value="sewing" data-fee="1500" /> Sewing – R1500
+                        </label>
+                        <label>
+                            <input type="checkbox" name="course" value="landscaping" data-fee="1500" /> Landscaping – R1500
+                        </label>
+                        <label>
+                            <input type="checkbox" name="course" value="life-skills" data-fee="1500" /> Life Skills – R1500
+                        </label>
+                        <label>
+                            <input type="checkbox" name="course" value="child-minding" data-fee="600" /> Child Minding – R600
+                        </label>
+                        <label>
+                            <input type="checkbox" name="course" value="cooking" data-fee="600" /> Cooking – R600
+                        </label>
+                        <label>
+                            <input type="checkbox" name="course" value="garden-maintenance" data-fee="600" /> Garden Maintenance – R600
+                        </label>
+                    </div>
+
+                    <button type="button" class="calculate-btn" onclick="calculateTotal()">Calculate Total</button>
+
+                    <div id="totalBox" class="total-box" style="display:none;">
+                        <h3>Total Fee (including VAT): <span id="totalAmount">R0.00</span></h3>
+                        <p>Note: This is a quoted fee. VAT (15%) is applied after bulk discounts.</p>
+                    </div>
+                </form>
+                <a href="#" class="btn" onclick="showSection('home')" style="margin-top: 2rem; display: inline-block;">Back to Courses</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Empowering the Nation. All rights reserved.</p>
+        <p>Contact: Precious Radebe | Johannesburg, South Africa</p>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"></a>
+            <a href="#" aria-label="Instagram"></a>
+            <a href="#" aria-label="LinkedIn"></a>
+        </div>
+    </footer>
+
+    <script>
+        // Show a section by ID
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(s => s.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        // Show course detail
+        function showCourseDetail(courseId) {
+            showSection(courseId);
+        }
+
+        // Calculate total fees with bulk discounts and VAT
+        function calculateTotal() {
+            const checkboxes = document.querySelectorAll('input[name="course"]:checked');
+            let subtotal = 0;
+
+            checkboxes.forEach(cb => {
+                const fee = parseFloat(cb.dataset.fee);
+                subtotal += fee;
+            });
+
+            // Apply bulk discount based on number of courses
+            let discountRate = 0;
+            if (checkboxes.length === 1) discountRate = 0;
+            else if (checkboxes.length === 2) discountRate = 0.05;
+            else if (checkboxes.length === 3) discountRate = 0.10;
+            else discountRate = 0.15; // 4 or more courses
+
+            const discountedSubtotal = subtotal * (1 - discountRate);
+
+            // Add 15% VAT
+            const vat = discountedSubtotal * 0.15;
+            const total = discountedSubtotal + vat;
+
+            // Display result in ZAR format
+            document.getElementById('totalAmount').textContent = 'R' + total.toFixed(2);
+            document.getElementById('totalBox').style.display = 'block';
+        }
+
+        // Default: show home
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('home');
+        });
+    </script>
+</body>
+</html>
+
