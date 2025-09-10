@@ -1,4 +1,6 @@
 # Project: Empowering the Nation – Web & Mobile App Design
+# AJ Dynamics 
+# ST10478718, # ST10494672
 
 This repository contains the design deliverables for **Milestone 2** of the "Empowering the Nation" project, including logo selection, UI/UX concepts, wireframes, and mobile app designs.
 
