@@ -25,21 +25,19 @@ Based on the outputs from **Milestone 1**, we have selected the best elements fr
 Below are the original logo designs created by team members during **Milestone 1**:
 
 ![Logo Concept 1](https://github.com/user-attachments/assets/68923c56-db1a-4579-bd44-e6ead4a47144)
-*Concept 1: Global focus with symbolic flame*
+* Global focus with symbolic flame*
 
 ![Logo Concept 2](https://github.com/user-attachments/assets/31cf8afa-daf6-4c1c-8a07-b018844e66b7)
-*Concept 2: Earth-centered design with bold typography*
+*Earth-centered design with bold typography*
 
 ![Logo Concept 3](https://github.com/user-attachments/assets/188b884c-b863-4a35-a271-02271d50ee48)
-*Concept 3: Modern, abstract representation of unity and growth*
+*Modern, abstract representation of unity and growth*
 
 ![Logo Concept 4](https://github.com/user-attachments/assets/3c4490a6-bee6-49ae-b5ef-032e6e54c283)
 *Concept 4: Minimalist globe with empowering text*
 
 ![Logo Concept 5](https://github.com/user-attachments/assets/850e873b-73a4-48de-9c36-e4c55d2cc101)
-*Concept 5: Dynamic layout with call-to-action energy*
-
->  **Final Decision**: After group discussion, we combined elements from Concepts 2 and 3 to create a new brand identity that balances global reach with modern simplicity.
+* Dynamic layout with call-to-action energy*
 
 ---
 
@@ -68,5 +66,3 @@ Below are the original logo designs created by team members during **Milestone 1
    - Keyword integration in content
 
 ---
-
-## 📁 Files Structure
