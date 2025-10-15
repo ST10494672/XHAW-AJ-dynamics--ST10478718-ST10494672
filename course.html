@@ -29,7 +29,7 @@
     <main class="container">
         <!-- Course Summaries -->
         <section id="course-overview" class="section-content">
-            <h2>Summary of Six-Month Courses (R1500 each)</h2>
+            <h2>Summary of Six-Month Courses</h2>
             <ul>
                 <li><a href="#first-aid" class="course-link">First Aid</a></li>
                 <li><a href="#sewing" class="course-link">Sewing</a></li>
@@ -39,16 +39,16 @@
 
             <h2>Summary of Six-Week Short Courses</h2>
             <ul>
-                <li><a href="#child-minding" class="course-link">Child Minding – R600</a></li>
-                <li><a href="#cooking" class="course-link">Cooking – R600</a></li>
-                <li><a href="#garden-maintenance" class="course-link">Garden Maintenance – R600</a></li>
+                <li><a href="#child-minding" class="course-link">Child Minding – R750</a></li>
+                <li><a href="#cooking" class="course-link">Cooking – R750</a></li>
+                <li><a href="#garden-maintenance" class="course-link">Garden Maintenance – R750</a></li>
             </ul>
         </section>
 
-        <!-- Course Details -->
+        <!-- Course Details (kept exactly as in your original) -->
         <section id="first-aid" class="section-content">
             <h2>First Aid</h2>
-            <p><strong>Fees:</strong> R1500</p>
+            <p><strong>Fees:</strong>R1500</p>
             <p><strong>Purpose:</strong> To provide first aid awareness and basic life support</p>
             <p><strong>Content:</strong></p>
             <ul>
@@ -78,7 +78,7 @@
 
         <section id="landscaping" class="section-content">
             <h2>Landscaping</h2>
-            <p><strong>Fees:</strong> R1500</p>
+            <p><strong>Fees:</strong>R1500</p>
             <p><strong>Purpose:</strong> To provide landscaping services for new and established gardens</p>
             <p><strong>Content:</strong></p>
             <ul>
@@ -93,7 +93,7 @@
 
         <section id="life-skills" class="section-content">
             <h2>Life Skills</h2>
-            <p><strong>Fees:</strong> R1500</p>
+            <p><strong>Fees:</strong>R1500 </p>
             <p><strong>Purpose:</strong> To provide skills to navigate basic life necessities</p>
             <p><strong>Content:</strong></p>
             <ul>
@@ -108,7 +108,7 @@
 
         <section id="child-minding" class="section-content">
             <h2>Child Minding</h2>
-            <p><strong>Fees:</strong> R600</p>
+            <p><strong>Fees:</strong> R750</p>
             <p><strong>Purpose:</strong> To train individuals in safe and nurturing care for children aged 0–12 years</p>
             <p><strong>Content:</strong></p>
             <ul>
@@ -123,7 +123,7 @@
 
         <section id="cooking" class="section-content">
             <h2>Cooking</h2>
-            <p><strong>Fees:</strong> R600</p>
+            <p><strong>Fees:</strong> R750</p>
             <p><strong>Purpose:</strong> To teach essential cooking skills for home and commercial use</p>
             <p><strong>Content:</strong></p>
             <ul>
@@ -138,7 +138,7 @@
 
         <section id="garden-maintenance" class="section-content">
             <h2>Garden Maintenance</h2>
-            <p><strong>Fees:</strong> R600</p>
+            <p><strong>Fees:</strong> R750</p>
             <p><strong>Purpose:</strong> To equip learners with skills to maintain healthy and attractive gardens</p>
             <p><strong>Content:</strong></p>
             <ul>
@@ -151,34 +151,81 @@
             <a href="#course-overview" class="btn">Back to Courses</a>
         </section>
 
-        <!-- Course Booking Form -->
+        <!--FEE CALCULATOR-->
         <section id="course-calculator" class="section-content">
-            <h2>Request Course Booking</h2>
-            <p>Select the courses you’re interested in. A consultant will contact you with a fee quote including applicable discounts and VAT (15%).</p>
+            <h2>Calculate Your Course Fees</h2>
+            <p>Select the courses you're interested in to see your total cost with applicable discounts.</p>
 
-            <form action="#" method="POST">
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" required />
-
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" required />
-
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required />
-
-                <h3>Select Courses:</h3>
-                <div class="checkbox-group">
-                    <label><input type="checkbox" name="courses" value="first-aid" /> First Aid – R1500</label>
-                    <label><input type="checkbox" name="courses" value="sewing" /> Sewing – R1500</label>
-                    <label><input type="checkbox" name="courses" value="landscaping" /> Landscaping – R1500</label>
-                    <label><input type="checkbox" name="courses" value="life-skills" /> Life Skills – R1500</label>
-                    <label><input type="checkbox" name="courses" value="child-minding" /> Child Minding – R600</label>
-                    <label><input type="checkbox" name="courses" value="cooking" /> Cooking – R600</label>
-                    <label><input type="checkbox" name="courses" value="garden-maintenance" /> Garden Maintenance – R600</label>
+            <div class="calculator">
+                <div class="course-selector">
+                    <input type="checkbox" id="chk-first-aid" data-price="1500">
+                    <div class="course-info">
+                        <label for="chk-first-aid"><strong>First Aid</strong></label>
+                        <div class="course-price">R1500</div>
+                    </div>
+                </div>
+                <div class="course-selector">
+                    <input type="checkbox" id="chk-sewing" data-price="1500">
+                    <div class="course-info">
+                        <label for="chk-sewing"><strong>Sewing</strong></label>
+                        <div class="course-price">R1500</div>
+                    </div>
+                </div>
+                <div class="course-selector">
+                    <input type="checkbox" id="chk-landscaping" data-price="1500">
+                    <div class="course-info">
+                        <label for="chk-landscaping"><strong>Landscaping</strong></label>
+                        <div class="course-price">R1500</div>
+                    </div>
+                </div>
+                <div class="course-selector">
+                    <input type="checkbox" id="chk-life-skills" data-price="1500">
+                    <div class="course-info">
+                        <label for="chk-life-skills"><strong>Life Skills</strong></label>
+                        <div class="course-price">R1500</div>
+                    </div>
+                </div>
+                <div class="course-selector">
+                    <input type="checkbox" id="chk-child-minding" data-price="600">
+                    <div class="course-info">
+                        <label for="chk-child-minding"><strong>Child Minding</strong></label>
+                        <div class="course-price">R750</div>
+                    </div>
+                </div>
+                <div class="course-selector">
+                    <input type="checkbox" id="chk-cooking" data-price="600">
+                    <div class="course-info">
+                        <label for="chk-cooking"><strong>Cooking</strong></label>
+                        <div class="course-price">R750</div>
+                    </div>
+                </div>
+                <div class="course-selector">
+                    <input type="checkbox" id="chk-garden-maintenance" data-price="600">
+                    <div class="course-info">
+                        <label for="chk-garden-maintenance"><strong>Garden Maintenance</strong></label>
+                        <div class="course-price">R750</div>
+                    </div>
                 </div>
 
-                <button type="submit" class="submit-btn">Submit Request</button>
-            </form>
+                <div class="total-summary">
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">R0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Discount (<span id="discount-percent">0</span>%):</span>
+                        <span id="discount-amount">-R0.00</span>
+                    </div>
+                    <div class="summary-row total-row">
+                        <span>Total:</span>
+                        <span id="total">R0.00</span>
+                    </div>
+                </div>
+
+                <p class="discount-note">
+                    Discounts: 2 courses = 5% | 3 courses = 10% | 4+ courses = 15%
+                </p>
+            </div>
         </section>
     </main>
 
@@ -186,5 +233,42 @@
         <p>&copy; 2023 Empowering the Nation. All rights reserved.</p>
         <p>Contact: Precious Radebe | Johannesburg, South Africa</p>
     </footer>
+
+    <!-- Live Calculator Script -->
+    <script>
+        const checkboxes = document.querySelectorAll('input[type="checkbox"][data-price]');
+        const subtotalEl = document.getElementById('subtotal');
+        const discountPercentEl = document.getElementById('discount-percent');
+        const discountAmountEl = document.getElementById('discount-amount');
+        const totalEl = document.getElementById('total');
+
+        function calculateTotal() {
+            let subtotal = 0;
+            let count = 0;
+
+            checkboxes.forEach(cb => {
+                if (cb.checked) {
+                    subtotal += parseFloat(cb.dataset.price);
+                    count++;
+                }
+            });
+
+            let discount = 0;
+            if (count >= 4) discount = 15;
+            else if (count === 3) discount = 10;
+            else if (count === 2) discount = 5;
+
+            const discountAmt = (subtotal * discount) / 100;
+            const total = subtotal - discountAmt;
+
+            subtotalEl.textContent = `R${subtotal.toFixed(2)}`;
+            discountPercentEl.textContent = discount;
+            discountAmountEl.textContent = `-R${discountAmt.toFixed(2)}`;
+            totalEl.textContent = `R${total.toFixed(2)}`;
+        }
+
+        checkboxes.forEach(cb => cb.addEventListener('change', calculateTotal));
+        calculateTotal(); // Initialize on load
+    </script>
 </body>
 </html>
