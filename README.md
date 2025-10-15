@@ -64,6 +64,43 @@ The **Calculate Your Course Fees** section lets users choose from available shor
 
 ---
 
+## Logo Concepts (Milestone 1)
+
+Below are the original logo designs created by team members during **Milestone 1**:
+
+![Logo Concept 1](https://github.com/user-attachments/assets/68923c56-db1a-4579-bd44-e6ead4a47144)  
+*Global focus with symbolic flame*
+
+![Logo Concept 2](https://github.com/user-attachments/assets/31cf8afa-daf6-4c1c-8a07-b018844e66b7)  
+*Earth-centered design with bold typography*
+
+![Logo Concept 3](https://github.com/user-attachments/assets/188b884c-b863-4a35-a271-02271d50ee48)  
+*Modern, abstract representation of unity and growth*
+
+![Logo Concept 4](https://github.com/user-attachments/assets/3c4490a6-bee6-49ae-b5ef-032e6e54c283)  
+*Minimalist globe with empowering text*
+
+![Logo Concept 5](https://github.com/user-attachments/assets/850e873b-73a4-48de-9c36-e4c55d2cc101)  
+*Dynamic layout with call-to-action energy*
+
+---
+
+## Project Screenshots
+
+Here are some screenshots showcasing the current state of the project:
+
+### Course Fee Calculator Interface
+![Course Fee Calculator](https://i.imgur.com/4KZlRrL.png)
+
+> *Users can select courses to calculate total fees with automatic discounts applied.*
+
+### Project File Structure in VS Code
+![VS Code Explorer](https://i.imgur.com/3YjJpXW.png)
+
+> *Clean, organized file structure with HTML pages, CSS stylesheet, and assets.*
+
+---
+
 ## Design and Development Tools
 
 - **Figma** – UI/UX design and prototyping  
@@ -89,5 +126,3 @@ The **Calculate Your Course Fees** section lets users choose from available shor
 - Add **JavaScript** for enhanced interactivity and improved user experience  
 - Continue optimizing **mobile layout** and **accessibility**  
 - Perform **usability testing** with real users  
-
----
