@@ -90,12 +90,14 @@ Below are the original logo designs created by team members during **Milestone 1
 Here are some screenshots showcasing the current state of the project:
 
 ### Course Fee Calculator Interface
-![Course Fee Calculator](https://i.imgur.com/4KZlRrL.png)
+<img width="595" height="706" alt="image" src="https://github.com/user-attachments/assets/45918862-823b-4d45-b368-a56d3ec00a34" />
+
 
 > *Users can select courses to calculate total fees with automatic discounts applied.*
 
 ### Project File Structure in VS Code
-![VS Code Explorer](https://i.imgur.com/3YjJpXW.png)
+<img width="219" height="226" alt="image" src="https://github.com/user-attachments/assets/0b20869a-57b0-4ea4-abe7-5dd5236ea639" />
+
 
 > *Clean, organized file structure with HTML pages, CSS stylesheet, and assets.*
 
