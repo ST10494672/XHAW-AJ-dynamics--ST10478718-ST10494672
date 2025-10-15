@@ -45,7 +45,7 @@
             </ul>
         </section>
 
-        <!-- Course Details (kept exactly as in your original) -->
+        <!-- Course Details (kept exactly as original) -->
         <section id="first-aid" class="section-content">
             <h2>First Aid</h2>
             <p><strong>Fees:</strong>R1500</p>
@@ -234,7 +234,7 @@
         <p>Contact: Precious Radebe | Johannesburg, South Africa</p>
     </footer>
 
-    <!-- Live Calculator Script -->
+    <!-- Live Calculator -->
     <script>
         const checkboxes = document.querySelectorAll('input[type="checkbox"][data-price]');
         const subtotalEl = document.getElementById('subtotal');
@@ -268,7 +268,7 @@
         }
 
         checkboxes.forEach(cb => cb.addEventListener('change', calculateTotal));
-        calculateTotal(); // Initialize on load
+        calculateTotal();
     </script>
 </body>
 </html>
