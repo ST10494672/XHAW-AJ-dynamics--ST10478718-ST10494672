@@ -9,215 +9,21 @@
     <title>Courses - Empowering the Nation</title>
 
     <!-- Google Fonts -->
-    <link href="logo.png" rel="stylesheet" />
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Open Sans', Arial, sans-serif;
-            background: #f9f9f7;
-            color: #333;
-            line-height: 1.7;
-        }
-
-        :root {
-            --primary: #2e8b57;
-            --accent: #ffcc00;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        header {
-            background: var(--primary);
-            padding: 0.8rem 0;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .logo {
-            width: 180px;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        nav {
-            background: #000;
-            padding: 0.5rem 0;
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 600;
-            padding: 0.6rem 1.2rem;
-            border-radius: 30px;
-        }
-
-        nav ul li a:hover,
-        nav ul li a.active {
-            background: var(--primary);
-        }
-
-        .section-content {
-            max-width: 900px;
-            margin: 3rem auto;
-            background: #fff;
-            padding: 2.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-            line-height: 1.8;
-        }
-
-        h1, h2 {
-            color: var(--primary);
-            text-align: center;
-        }
-
-        h2 {
-            margin-bottom: 1.5rem;
-            position: relative;
-        }
-
-        h2:after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background: var(--primary);
-        }
-
-        p {
-            margin-bottom: 1.2rem;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        ul li {
-            margin: 0.8rem 0;
-        }
-
-        .course-link {
-            color: var(--primary);
-            text-decoration: underline;
-            font-weight: 600;
-        }
-
-        .course-link:hover {
-            color: var(--accent);
-        }
-
-        .btn {
-            display: inline-block;
-            background: var(--primary);
-            color: white;
-            padding: 0.6rem 1.5rem;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 1rem;
-        }
-
-        .btn:hover {
-            background: #226b45;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-
-        input[type="text"],
-        input[type="tel"],
-        input[type="email"] {
-            width: 100%;
-            padding: 0.6rem;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .checkbox-group label {
-            display: block;
-            margin: 0.5rem 0;
-            font-weight: normal;
-        }
-
-        .submit-btn {
-            background: var(--accent);
-            color: #333;
-            padding: 0.6rem 1.5rem;
-            border: none;
-            border-radius: 30px;
-            font-weight: 600;
-            cursor: pointer;
-            margin-top: 1rem;
-        }
-
-        .submit-btn:hover {
-            background: #e6b800;
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem 1rem;
-            background: var(--primary);
-            color: white;
-            margin-top: 3rem;
-        }
-
-        footer p {
-            margin: 0.5rem 0;
-        }
-
-        @media (max-width: 768px) {
-            .section-content {
-                padding: 1.5rem;
-                margin: 2rem 1rem;
-            }
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
         <img src="logo.png" alt="Empowering the Nation Logo" class="logo" />
         <nav aria-label="Main Navigation">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about us.html">About Us</a></li>
-    <li><a href="course.html">Courses</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about us.html">About Us</a></li>
+                <li><a href="course.html" class="active" aria-current="page">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main class="container">
@@ -239,7 +45,7 @@
             </ul>
         </section>
 
-        <!-- Course Details (Static) -->
+        <!-- Course Details -->
         <section id="first-aid" class="section-content">
             <h2>First Aid</h2>
             <p><strong>Fees:</strong> R1500</p>
@@ -345,7 +151,7 @@
             <a href="#course-overview" class="btn">Back to Courses</a>
         </section>
 
-        <!-- Fee Calculator (Static Form - No JS Calculation) -->
+        <!-- Course Booking Form -->
         <section id="course-calculator" class="section-content">
             <h2>Request Course Booking</h2>
             <p>Select the courses you’re interested in. A consultant will contact you with a fee quote including applicable discounts and VAT (15%).</p>
